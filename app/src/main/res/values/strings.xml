@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ToDoList</string>
     <string name="action_settings">Settings</string>
+    <string name="new_contact">New Contact</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="contact_email">Contact Email</string>
 </resources>
