@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import models.Contact
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,5 +36,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun addAndEditContacts(b: Boolean, contact: Contact, position: Int) {
+
     }
 }
