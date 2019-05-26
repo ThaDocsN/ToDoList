@@ -15,7 +15,7 @@ import models.Contact
  */
 class ContactRepo(application: Application) {
 
-    private val contactLiveData: MutableLiveData<List<Contact>> = MutableLiveData()
+    val contactLiveData: MutableLiveData<List<Contact>> = MutableLiveData()
     private val disposable: CompositeDisposable = CompositeDisposable()
     private val db: ContactDatabase = ContactDatabase.getDatabase(application)
     private var rowIdOfTheItemInserted: Long = 0
