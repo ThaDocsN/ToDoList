@@ -1,7 +1,7 @@
-package data
+package com.thadocizn.todolist.data
 
 import android.arch.persistence.room.*
-import models.Contact
+import com.thadocizn.todolist.models.Contact
 import io.reactivex.Flowable
 
 

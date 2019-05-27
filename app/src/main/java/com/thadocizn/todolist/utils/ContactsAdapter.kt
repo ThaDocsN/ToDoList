@@ -1,4 +1,4 @@
-package adapters
+package com.thadocizn.todolist.utils
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.thadocizn.todolist.MainActivity
 import com.thadocizn.todolist.R
-import models.Contact
-import java.util.ArrayList
+import com.thadocizn.todolist.models.Contact
+import java.util.*
 
 /**
  * Created by charles on 26,May,2019

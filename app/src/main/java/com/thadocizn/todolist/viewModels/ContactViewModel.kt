@@ -1,10 +1,10 @@
-package viewModels
+package com.thadocizn.todolist.viewModels
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.LiveData
-import models.Contact
-import repositories.ContactRepo
+import com.thadocizn.todolist.models.Contact
+import com.thadocizn.todolist.repositories.ContactRepo
 
 /**
  * Created by charles on 26,May,2019

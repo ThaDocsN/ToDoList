@@ -1,10 +1,8 @@
-package data
+package com.thadocizn.todolist.data
 
 import android.arch.persistence.room.Database
-import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
-import android.content.Context
-import models.Contact
+import com.thadocizn.todolist.models.Contact
 
 /**
  * Created by charles on 26,May,2019

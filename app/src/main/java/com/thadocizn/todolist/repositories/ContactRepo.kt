@@ -1,18 +1,17 @@
-package repositories
+package com.thadocizn.todolist.repositories
 
 import android.app.Application
 import android.arch.lifecycle.MutableLiveData
 import android.arch.persistence.room.Room
 import android.widget.Toast
-import data.ContactDatabase
+import com.thadocizn.todolist.data.ContactDatabase
+import com.thadocizn.todolist.models.Contact
 import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.functions.Action
 import io.reactivex.functions.Consumer
 import io.reactivex.observers.DisposableCompletableObserver
 import io.reactivex.schedulers.Schedulers
-import models.Contact
 
 /**
  * Created by charles on 26,May,2019

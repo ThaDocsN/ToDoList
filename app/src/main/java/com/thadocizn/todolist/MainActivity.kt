@@ -1,6 +1,5 @@
 package com.thadocizn.todolist
 
-import adapters.ContactsAdapter
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,17 +8,19 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.LinearLayout
+import com.thadocizn.todolist.models.Contact
+import com.thadocizn.todolist.utils.ContactsAdapter
+import com.thadocizn.todolist.viewModels.ContactViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-import models.Contact
-import viewModels.ContactViewModel
+import org.jetbrains.anko.selector
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: ContactViewModel
     val list = ArrayList<Contact>()
-    val adapter = ContactsAdapter(this,list,this)
+    val adapter = ContactsAdapter(this,list, this@MainActivity)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+            val countries = listOf("Russia", "USA", "Japan", "Australia")
+            selector("Where are you from?", countries) { _, i ->
+                toast("So you're living in ${countries[i]}, right?")
+            }
         }
     }
 
