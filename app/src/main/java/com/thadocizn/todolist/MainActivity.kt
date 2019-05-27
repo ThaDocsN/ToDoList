@@ -18,9 +18,9 @@ import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var viewModel: ContactViewModel
-    val list = ArrayList<Contact>()
-    val adapter = ContactsAdapter(this,list, this@MainActivity)
+    private lateinit var viewModel: ContactViewModel
+    private val list = ArrayList<Contact>()
+    private val adapter = ContactsAdapter(this,list, this@MainActivity)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
