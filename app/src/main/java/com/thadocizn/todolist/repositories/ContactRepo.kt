@@ -26,7 +26,6 @@ class ContactRepo(val application: Application) {
     init {
         db = Room.databaseBuilder<ContactDatabase>(application.applicationContext, ContactDatabase::class.java!!, "ContactDB").build()
 
-
         disposable.add(db.contactDao.contacts
             .subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread())
