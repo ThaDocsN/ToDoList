@@ -19,8 +19,8 @@ interface ContactDao {
     @Delete
     fun deleteContact(contact: Contact)
 
-    @Query("select * from contacts")
-    fun getContacts(): Flowable<List<Contact>>
+    @get:Query("select * from contacts")
+    val contacts: Flowable<List<Contact>>
 
     @Query("select * from contacts where id ==:contactId")
     fun getContact(contactId: Long): Contact

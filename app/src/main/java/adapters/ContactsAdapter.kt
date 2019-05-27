@@ -1,3 +1,5 @@
+package adapters
+
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -12,7 +14,7 @@ import java.util.ArrayList
 /**
  * Created by charles on 26,May,2019
  */
-class ContactsAdapter(private val context: Context, private val contactList: ArrayList<Contact>, private val mainActivity: MainActivity) : RecyclerView.Adapter<ContactsAdapter.MyViewHolder>() {
+class ContactsAdapter( val context: Context,  val contactList: ArrayList<Contact>,  val mainActivity: MainActivity) : RecyclerView.Adapter<ContactsAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
